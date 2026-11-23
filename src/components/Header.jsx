@@ -4,11 +4,33 @@ import { EMPRESA, WHATS } from '../data.js'
 const LINKS = [
   { href: '#inicio', rotulo: 'Início' },
   { href: '#servicos', rotulo: 'Tratamentos' },
+  { href: '#clinica', rotulo: 'A Clínica' },
   { href: '#galeria', rotulo: 'Galeria' },
   { href: '#agendamento', rotulo: 'Agendamento' },
-  { href: '#clinica', rotulo: 'A Clínica' },
   { href: '#contato', rotulo: 'Contato' },
 ]
+
+function MarcaSorriso() {
+  return (
+    <svg
+      className="brand-mark"
+      viewBox="0 0 48 48"
+      role="img"
+      aria-label="Sorriso CliniDENT"
+    >
+      <circle cx="24" cy="24" r="24" fill="#8fe3c0" />
+      <circle cx="17" cy="19" r="2.4" fill="#062a33" />
+      <circle cx="31" cy="19" r="2.4" fill="#062a33" />
+      <path
+        d="M13 27 Q24 37 35 27"
+        stroke="#062a33"
+        strokeWidth="3.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
 
 export default function Header() {
   const [aberto, setAberto] = useState(false)
@@ -28,9 +50,7 @@ export default function Header() {
           className="brand"
           aria-label="CliniDENT — voltar ao início"
         >
-          <span className="brand-mark" aria-hidden="true">
-            C
-          </span>
+          <MarcaSorriso />
           <span className="brand-text">
             <span className="brand-name">CliniDENT</span>
             <span className="brand-sub">CENTRO ODONTOLÓGICO</span>
@@ -84,7 +104,7 @@ export default function Header() {
         >
           Chamar no WhatsApp
         </a>
-        <a href={EMPRESA.whatsappUrl} onClick={() => setAberto(false)}>
+        <a href="tel:+555135901515" onClick={() => setAberto(false)}>
           Ligar para a clínica
         </a>
       </nav>

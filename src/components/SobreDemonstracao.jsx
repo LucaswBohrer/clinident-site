@@ -1,12 +1,17 @@
 import { EMPRESA } from '../data.js'
+import Reveal from './Reveal.jsx'
 
 export default function SobreDemonstracao() {
   return (
     <section className="secao sobre-demo" id="sobre-demonstracao">
-      <div className="container sobre-demo-grid">
-        <div>
-          <p className="secao-kicker">Sobre esta demonstração</p>
-          <h2>Demonstração</h2>
+      <div className="container">
+        <Reveal>
+          <div className="secao-cabecalho">
+            <div>
+              <p className="secao-kicker">Sobre esta demonstração</p>
+              <h2>Demonstração.</h2>
+            </div>
+          </div>
           <p>
             Este site é um modelo de apresentação criado para demonstrar como
             ficaria a presença online da CliniDENT — ele usa os dados
@@ -31,7 +36,7 @@ export default function SobreDemonstracao() {
             clínica, os ajustes de cores e textos aprovados por ela e a
             publicação no domínio próprio da CliniDENT.
           </p>
-        </div>
+        </Reveal>
       </div>
     </section>
   )
